@@ -283,6 +283,7 @@ namespace KeyBoardStyle
                     ch = 1;
                     MessageBox.Show("Пользователь успешно добавлен");
                     Added -= Next2_Click;
+                    Added += donotan;
                     Fild.KeyDown -= getst;
                     Fild.KeyUp -= getstat;
                     tid.Text = "";
@@ -683,7 +684,12 @@ namespace KeyBoardStyle
                 between.Clear();
             }
         }
-
+        
+        public void donotan(object sender, RoutedEventArgs e)
+        {
+            checklist.Clear();
+        }
+        
         private void Fild_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
