@@ -391,7 +391,11 @@ namespace KeyBoardStyle
         }
         public void result(int us)
         {
-            double locker = 900;
+          double locker = 900;
+            if (lst[us].password.Length > 14)
+            {
+                locker = 1200;
+            }        
             for (int i = 0; i < 9; i++)
             {
                 if (checklist[i] < locker && checklist[i + 1] < locker)
